@@ -28,8 +28,8 @@ export default function Home({ posts }: Props) {
             is a place to Write, Read and Connect
           </h1>
           <h2 className="text-sm">
-            It's easy and free to post thinking on any topic and connect with
-            millions of readers.
+            It&apos;s easy and free to post thinking on any topic and connect
+            with millions of readers.
           </h2>
         </div>
         <img
