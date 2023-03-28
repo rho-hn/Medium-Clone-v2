@@ -13,7 +13,7 @@ function Header() {
           />
         </Link>
         <div className="hidden  items-center space-x-5 md:inline-flex">
-          <Link href="/About">
+          <Link href="/about">
             <h3 className="cursor-pointer">About</h3>
           </Link>
           <h3 className="cursor-pointer">Contact</h3>
@@ -24,7 +24,7 @@ function Header() {
       </div>
       <div className="flex items-center space-x-5 text-green-500">
         <h3>Sign In</h3>
-        <Link href="./About">
+        <Link href="./about">
           <h3 className="rounded-full border px-4 py-1 border-green-600">
             Get Started
           </h3>
