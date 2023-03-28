@@ -3,7 +3,7 @@ import React from 'react'
 
 function Header() {
   return (
-    <header className="flex justify-between p-3 max-w-7xl mx-auto">
+    <header className="flex justify-between p-3 max-w-7xl mx-auto gap-4">
       <div className="flex items-center space-x-5">
         <Link href="/">
           <img
@@ -22,10 +22,12 @@ function Header() {
           </h3>
         </div>
       </div>
-      <div className="flex items-center space-x-5 text-green-500">
-        <h3>Sign In</h3>
+      <div className="flex items-center space-x-5 text-green-500 whitespace-nowrap">
+        <div className="invisible lg:visible">
+          <h3 className="">Sign In</h3>
+        </div>
         <Link href="./about">
-          <h3 className="rounded-full border px-4 py-1 border-green-600">
+          <h3 className="rounded-full border px-4 py-1 border-green-600 whitespace-nowrap">
             Get Started
           </h3>
         </Link>
