@@ -119,7 +119,6 @@ function About() {
       </div>
       {/* body content top  */}
 
-      {/* left side */}
       {bigScreen ? (
         <>
           <div className="flex">
@@ -143,7 +142,7 @@ function About() {
                 fueled by important ideas and the people who think about them.
               </div>
             </div>
-            <div className="my-auto flex min-w-[50%] justify-center border-b-4 align-middle">
+            <div className="my-auto flex lg:min-w-1/2 justify-center border-b-4 align-middle">
               <iframe
                 height="420px"
                 width="420px"

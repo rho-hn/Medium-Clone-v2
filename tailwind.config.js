@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       colors:{
         'orangish':'#ffd1b9'
+      },
+      minWidth: {
+        '1/2': '50%',
       }
     },
   },
