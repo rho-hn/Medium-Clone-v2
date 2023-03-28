@@ -4,15 +4,13 @@ import Header from './components/Header'
 import { useMediaQuery } from 'react-responsive'
 import About_bracket from './components/About_bracket'
 
-function about() {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-width: 1224px)',
-  })
+function About() {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 700px)' })
   const [bigScreen, setBigScreen] = useState(false)
   useEffect(() => {
     isTabletOrMobile ? setBigScreen(false) : setBigScreen(true)
   }, [isTabletOrMobile])
+  console.log(bigScreen)
 
   const listForLargeDevice = [
     {
@@ -110,7 +108,7 @@ function about() {
         <p className=" pt-7 pb-5 font-serif text-7xl lg:pb-7 ">
           Every idea needs a
         </p>
-        <div className="image-container flex  justify-center  pb-10 lg:ml-5 lg:pb-0 lg:align-middle">
+        <div className=" flex  justify-center  pb-10 lg:ml-5 lg:pb-0 lg:align-middle">
           <Image
             src="https://cdn-static-1.medium.com/sites/medium.com/about/images/wordmark.svg"
             alt="alt"
@@ -158,7 +156,7 @@ function about() {
       ) : (
         <>
           <div className="flex flex-col">
-            <div className=" flex flex-col justify-center align-middle">
+            <div className=" flex flex-col justify-center align-middle mx-auto">
               <iframe
                 height="420px"
                 width="420px"
@@ -191,7 +189,7 @@ function about() {
       )}
 
       {/* Body content middle section */}
-      <div className="  bg-[#ffd1b9] p-12 text-center  font-serif">
+      <div className="bg-orangish p-12 text-center  font-serif">
         <div className="mx-a mx-auto flex flex-col justify-center lg:w-[800px]">
           <h1 className="mb-8 text-7xl font-[500]">
             A living network of curious minds.
@@ -208,6 +206,7 @@ function about() {
           <div className="mt-16 grid grid-flow-row grid-cols-3">
             {listForLargeDevice.map((item) => (
               <About_bracket
+                key={item.name}
                 name={item.name}
                 image={item.image}
                 link={item.link}
@@ -215,9 +214,10 @@ function about() {
             ))}
           </div>
         ) : (
-          <div className="mt-16 grid grid-flow-col grid-rows-4">
+          <div className="mt-16 grid grid-flow-col grid-rows-4 min-w-max">
             {listForSmallDevice.map((item) => (
               <About_bracket
+                key={item.name}
                 name={item.name}
                 image={item.image}
                 link={item.link}
@@ -229,16 +229,16 @@ function about() {
 
       {/* footer for about */}
       <div className="bg-black text-white font-serif flex justify-center align-middle mx-auto flex-col text-center p-12">
-        <h2 className="text-7xl px-24 py-14">
+        <h2 className="lg:text-7xl lg:px-24 lg:py-10 text-4xl font-[500] py-8">
           Create the space for your thinking to take off.
         </h2>
-        <p className="font-serif px-52">
-          A blank page is also a door. At Medium you can walk through it. It's
-          easy and free to share your thinking on any topic, connect with an
-          audience, express yourself with a range of publishing tools, and even
-          earn money for your work.
+        <p className="font-serif lg:px-52">
+          A blank page is also a door. At Medium you can walk through it.
+          It`&apos;s easy and free to share your thinking on any topic, connect
+          with an audience, express yourself with a range of publishing tools,
+          and even earn money for your work.
         </p>
-        <button className="rounded-full text-green-600 border-2 border-green-500 max-w-max p-4 mx-auto my-6">
+        <button className="rounded-full text-green-600 border-2 border-green-500 max-w-max p-4 mx-auto lg:my-10 my-6">
           Write on Medium
         </button>
       </div>
@@ -246,4 +246,4 @@ function about() {
   )
 }
 
-export default about
+export default About
